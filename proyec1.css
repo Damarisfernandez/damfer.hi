@@ -1,0 +1,204 @@
+
+
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body, html {
+            height: 100%;
+            overflow-y: auto  ;
+        }
+
+        /* Video de fondo */
+        .background-video {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+         /* Menú de navegación */
+        .navbar {
+            position: absolute ;
+            top: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px ;
+            transform: 0.2s;
+            z-index: 1;
+        }
+        .navbar .logo{
+            display: flex;
+            align-items: center;
+
+        }
+        .navbar .logo img{
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            margin: 35px;
+            box-shadow: 8px 10px 15px 0px rgba(0, 0, 0, 1.5);
+            
+            
+        }
+        .logo img:hover{
+            transform: scale(1.5);
+        }
+        .navbar .menu {
+            display: flex;
+            gap: 15px;
+            flex-wrap:  wrap;
+        }
+
+        .navbar .menu a {
+            color: white;
+            margin: 0 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+            background-color: nude;
+            padding: 10px ;
+            border: 3px solid;
+            border-radius: 0px 20px 0px 20px;
+            box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 1.5);
+        }
+
+        .navbar a:hover {
+            color: skyblue;
+            background-color:   rgba( 255, 255, 255, 0.9);
+            transform: scale(0.9);
+        }
+        
+
+
+        /* Contenedor de contenido */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Alinea a la izquierda */
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+            padding-left: 50px; /* Espacio desde el borde izquierdo */
+            color: white;
+            text-align: left; /* Texto alineado a la izquierda */
+             /* Fondo semi-transparente */
+
+        }
+
+        /* Estilos de texto */
+        .content h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            font-family: Bodoni MT Black;
+        }
+
+        .content p {
+            font-size: 1.2em;
+            margin-bottom: 1.5em;
+            max-width: 600px;
+            font-family: arial;
+        }
+
+        /* Redes sociales */
+
+        .social-media {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translate(-50%);
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            
+        }
+        .social-media p{
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-family: Bookman Old Style;
+        }
+
+        /* Estilos para los enlaces e iconos de redes sociales */
+        .social-media a {
+            font-size: 40px;
+            color: white;
+            text-decoration: none;
+            transform: scale(1.0);
+            display: inline-block;
+
+        }
+        .WatshApp a:hover {
+            color: #25d366; /* Cambia el color a verde al pasar el cursor (usualmente para WhatsApp) */
+            transform: scale(1.6); /* Aumenta el tamaño al pasar el cursor */
+        }
+        .twitter a:hover {
+            color: #1da1f2; 
+            transform: scale(1.6); 
+        }
+        .facebook a:hover {
+            color: #3b5998; 
+            transform: scale(1.6); 
+        }
+        .instagram a:hover{
+            color: #833ab4;
+            transform: scale(1.6);
+        }
+
+        /* Diseño responsivo para pantallas más pequeñas */
+        @media (max-width: 768px) {
+        
+            .menu a{
+                font-size:  0.9rem;
+            }
+            .content{
+                padding: 50px 10px;
+            }
+
+            .content h1 {
+                font-size: 1.8em;
+            }
+
+            .content p {
+                font-size: 1em;
+            }
+            .social-media div{
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        /* Diseño para pantallas muy pequeñas (por ejemplo, teléfonos) */
+        @media (max-width: 480px) {
+            .content {
+                padding-left: 10px;
+            }
+
+            .content h1 {
+                font-size: 2em;
+            }
+
+            .content p {
+                font-size: 0.9em;
+            }
+
+            .content a.button {
+                padding: 8px 16px;
+                font-size: 0.8em;
+            }
+
+            .social-media {
+                left: 10px;
+                bottom: 10px;
+            }
+        }
+    
